@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Image } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,7 +11,13 @@ import RightNav from '../Right-Nav/RightNav';
 import { FcBusinessman } from "react-icons/fc";
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
         <div>
             <Navbar className='mb-3' collapseOnSelect expand="lg" bg="" variant="light">
@@ -39,7 +45,7 @@ const Header = () => {
                                 {
                                     user?.uid ?
                                         <><span>{user?.displayName}</span>
-                                            <button>Log Out</button>
+                                            <Button onClick={handleLogOut} variant="primary" className='ms-2'>Log Out</Button>
                                         </>
                                         :
                                         <>

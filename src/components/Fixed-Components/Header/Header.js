@@ -22,12 +22,11 @@ const Header = () => {
         <div>
             <Navbar className='mb-3' collapseOnSelect expand="lg" bg="" variant="light">
                 <Container>
-                    <Navbar.Brand><Link to={'/'} className="text-decoration-none">BREAKING-CODE</Link ></Navbar.Brand>
+                    <Navbar.Brand><Link to={'/'} className="text-decoration-none fs-3 fw-bold">BREAKING-CODE</Link ></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link><Link to='/blog' className="text-decoration-none">BLOG</Link></Nav.Link>
-                            <Nav.Link><Link to='/blog' className="text-decoration-none">ABOUT</Link></Nav.Link>
 
                         </Nav>
                         <Nav>

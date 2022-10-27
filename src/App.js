@@ -5,9 +5,12 @@ import background from './bg.jpg'
 
 function App() {
   const myStyle = {
+    width: '100%',
+    height: '100%',
     backgroundImage: `url(${background})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    overflow: 'hidden',
   }
   return (
     <div style={myStyle}>

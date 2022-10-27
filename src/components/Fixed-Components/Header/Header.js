@@ -9,6 +9,7 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import LeftNav from '../Left-Nav/LeftNav';
 import RightNav from '../Right-Nav/RightNav';
 import { FcBusinessman } from "react-icons/fc";
+import logo from "./appLogo.png";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -22,7 +23,14 @@ const Header = () => {
         <div>
             <Navbar className='mb-3' collapseOnSelect expand="lg" bg="" variant="light">
                 <Container>
-                    <Navbar.Brand><Link to={'/'} className="text-decoration-none fs-3 fw-bold">BREAKING-CODE</Link ></Navbar.Brand>
+
+                    <Navbar.Brand><Link to={'/'} className="text-decoration-none fs-2 fw-bold"><img
+                        alt=""
+                        src={logo}
+                        width="45"
+                        height="45"
+                        className="d-inline-block align-top"
+                    />{' '} BREAKING-CODE</Link ></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">

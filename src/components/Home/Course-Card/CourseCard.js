@@ -12,10 +12,10 @@ const CourseCard = ({ course }) => {
                 <Card.Title className='text-center'>{course.title}</Card.Title>
                 <Card.Text>
                     {course.description.length > 250 ?
-                        <p>{course.description.slice(0, 100) + '...'}<Link to={`/course/${course.id}`}>More</Link>
-                        </p>
+                        <>{course.description.slice(0, 100) + '...'}<Link to={`/course/${course.id}`}>More</Link>
+                        </>
                         :
-                        <p>{course.description}</p>
+                        <>{course.description}</>
                     }
                 </Card.Text>
                 <Link to={`/course/${course.id}`}><Button className='w-100' variant="primary">Details</Button></Link>

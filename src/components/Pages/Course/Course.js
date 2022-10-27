@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -16,7 +16,9 @@ const Course = () => {
                         <p>{course.description}</p>
                     </Card.Text>
                 </Card.Body>
+                <Link to={`/checkout`}><Button className='w-100' variant="primary">Buy</Button></Link>
             </Card >
+
         </div>
     );
 };

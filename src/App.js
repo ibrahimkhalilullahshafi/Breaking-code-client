@@ -6,7 +6,6 @@ import background from './bg.jpg'
 function App() {
   const myStyle = {
     backgroundImage: `url(${background})`,
-    height: '100vh',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   }

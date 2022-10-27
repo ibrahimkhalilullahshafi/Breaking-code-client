@@ -13,7 +13,7 @@ const LeftNav = () => {
             <h2>Courses</h2>
             <div>
                 {
-                    courses.map(course => <p key={course.id}><Link to={`/course/${course.id}`}>{course.title}</Link>
+                    courses.map(course => <p key={course.id}><Link to={`/course/${course.id}`} className="text-decoration-none">{course.title}</Link>
                     </p>)
                 }
             </div>

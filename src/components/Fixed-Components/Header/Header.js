@@ -1,17 +1,37 @@
 import React, { useContext } from 'react';
-import { Button, Image } from 'react-bootstrap';
+import { Button, Form, Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import LeftNav from '../Left-Nav/LeftNav';
 import RightNav from '../Right-Nav/RightNav';
 import { FcBusinessman } from "react-icons/fc";
 import logo from "./appLogo.png";
+import { useEffect } from 'react';
+import { useState } from 'react';
+import "./header.css"
 
 const Header = () => {
+
+    const [theme, setTheme] = useState(
+        localStorage.getItem('theme') || 'light'
+    );
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    };
+    useEffect(() => {
+        localStorage.setItem('theme', theme);
+        document.body.className = theme;
+    }, [theme]);
+
+
+
     const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
@@ -19,6 +39,8 @@ const Header = () => {
             .then(() => { })
             .catch(error => console.error(error))
     }
+
+
     return (
         <div>
             <Navbar className='mb-3' collapseOnSelect expand="lg" bg="" variant="light">
@@ -32,12 +54,22 @@ const Header = () => {
                         className="d-inline-block align-top"
                     />{' '} BREAKING-CODE</Link ></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link><Link to='/blog' className="text-decoration-none">BLOG</Link></Nav.Link>
 
                         </Nav>
                         <Nav>
+                            <Nav>
+                                <Form className='mt-2'><Form.Check
+                                    type="switch"
+                                    id="custom-switch"
+                                    label="Dark"
+                                    onClick={toggleTheme}
+                                />
+                                </Form>
+                            </Nav>
                             <Nav.Link >
                                 {
                                     user?.uid ?

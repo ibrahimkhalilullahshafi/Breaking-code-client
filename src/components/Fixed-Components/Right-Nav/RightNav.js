@@ -31,8 +31,8 @@ const RightNav = () => {
     return (
         <div>
             <ButtonGroup vertical>
-                <Button onClick={googleSignInHandler} className='rounded-pill' variant="outline-primary"> <FcGoogle></FcGoogle> Login with GOOGLE</Button>
-                <Button onClick={githubSignInHandler} className='mt-2 rounded-pill' variant="outline-dark"><FaGithub></FaGithub> Login with Github</Button>
+                <Button onClick={googleSignInHandler} className='rounded-pill' variant="info"> <FcGoogle></FcGoogle> Login with GOOGLE</Button>
+                <Button onClick={githubSignInHandler} className='mt-2 rounded-pill' variant="dark"><FaGithub></FaGithub> Login with Github</Button>
             </ButtonGroup>
         </div>
     );

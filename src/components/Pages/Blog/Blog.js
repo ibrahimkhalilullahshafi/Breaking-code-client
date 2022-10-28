@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 const Blog = () => {
     return (
         <div>
-            <Card border="dark">
+            <Card border="dark" className='bg-transparent'>
                 <Card.Header>Question:1: what is cors?</Card.Header>
                 <Card.Body>
                     <Card.Title>Answer:</Card.Title>
@@ -16,7 +16,7 @@ const Blog = () => {
                 </Card.Body>
             </Card>
             <br />
-            <Card border="dark">
+            <Card border="dark" className='bg-transparent'>
                 <Card.Header>Question:2: Why are you using firebase? What other options do you have to implement authentication?</Card.Header>
                 <Card.Body>
                     <Card.Title>Answer:</Card.Title>
@@ -36,7 +36,7 @@ const Blog = () => {
                 </Card.Body>
             </Card>
             <br />
-            <Card border="dark">
+            <Card border="dark" className='bg-transparent'>
                 <Card.Header>Question:3: How does the private route work?</Card.Header>
                 <Card.Body>
                     <Card.Title>Answer:</Card.Title>
@@ -47,7 +47,7 @@ const Blog = () => {
                 </Card.Body>
             </Card>
             <br />
-            <Card border="dark">
+            <Card border="dark" className='bg-transparent'>
                 <Card.Header>Question:4: What is Node? How does Node work?</Card.Header>
                 <Card.Body>
                     <Card.Title>Answer:</Card.Title>

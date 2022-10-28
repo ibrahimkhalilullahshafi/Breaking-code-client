@@ -10,10 +10,10 @@ const LeftNav = () => {
     })
     return (
         <div>
-            <h2>Courses</h2>
+            <h2 className='fw-bold'>Courses</h2>
             <div>
                 {
-                    courses.map(course => <p key={course.id}><Link to={`/course/${course.id}`} className="text-decoration-none">{course.title}</Link>
+                    courses.map(course => <p key={course.id}><Link to={`/course/${course.id}`} className="text-decoration-none text-black fw-semibold">{course.title}</Link>
                     </p>)
                 }
             </div>

@@ -14,9 +14,9 @@ const Course = () => {
                 <Pdf targetRef={ref} filename="code-example.pdf">
                     {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
                 </Pdf></div>
-            <div ref={ref}>
+            <div ref={ref} >
                 <div className='d-flex justify-content-center'>
-                    <Card className='col-6'>
+                    <Card className='col-6 bg-transparent'>
                         <Card.Img variant="top" src={course.image} />
                         <Card.Body>
                             <Card.Title className='text-center'>{course.title}</Card.Title>

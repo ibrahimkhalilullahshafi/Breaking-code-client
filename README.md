@@ -1,3 +1,32 @@
+# Project Details
+
+❄️ Project Name : Breaking Code 
+
+❄️ Live-site link: 
+
+    (https://)
+
+❄️ Technologies: A list of technologies used within the project :
+    
+*   "bootstrap": ,
+*   "firebase": "^9.12.1",
+*   "react": "^18.2.0",
+*   "react-bootstrap": "^2.5.0",
+*   "react-dom": "^18.2.0",
+*   "react-icons": "^4.6.0",
+*   "react-router-dom": "^6.4.2",
+*   "react-scripts": "5.0.1",
+*   "react-to-pdf": "^0.0.14",
+
+❄️ Features:
+
+*   Easy login and sign in system,
+*   Private route,
+*   Light mode to dark mode,
+*   Blog section,
+*   FAQ section.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

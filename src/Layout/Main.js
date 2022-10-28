@@ -23,7 +23,7 @@ const Main = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer></Footer>
+            <Footer className='position-fixed fixed-bottom'></Footer>
         </div>
     );
 };

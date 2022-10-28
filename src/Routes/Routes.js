@@ -7,6 +7,7 @@ import Login from "../components/Pages/Login/Login";
 import SignUp from "../components/Pages/Login/SignUp";
 import Terms from "../components/Pages/Login/Terms";
 import Main from "../Layout/Main";
+import NotFound from "./404route/NotFound";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
@@ -33,8 +34,9 @@ export const routes = createBrowserRouter([
                 element: <SignUp></SignUp>,
             },
             {
-                path: "/checkout",
+                path: "/checkout/:id",
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://test-server-nu.vercel.app/courses/${params.id}`)
             },
             {
                 path: "/terms",
@@ -45,5 +47,9 @@ export const routes = createBrowserRouter([
                 element: <Blog></Blog>
             }
         ]
+    },
+    {
+        path: "/*",
+        element: <NotFound></NotFound>
     }
 ])

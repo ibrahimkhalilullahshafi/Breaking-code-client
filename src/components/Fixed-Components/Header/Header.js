@@ -57,7 +57,7 @@ const Header = () => {
 
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link><Link to='/blog' className="text-decoration-none">BLOG</Link></Nav.Link>
+                            <Nav><Link to='/blog' className="text-decoration-none fw-semibold fs-4 text-black">BLOG</Link></Nav>
 
                         </Nav>
                         <Nav>
@@ -70,19 +70,19 @@ const Header = () => {
                                 />
                                 </Form>
                             </Nav>
-                            <Nav.Link >
+                            <Nav>
                                 {
                                     user?.uid ?
-                                        <><span>{user?.displayName}</span>
-                                            <Button onClick={handleLogOut} variant="primary" className='ms-2'>Log Out</Button>
+                                        <><span className='ms-2 mt-2'>{user?.displayName}</span>
+                                            <Button onClick={handleLogOut} variant="primary" className='ms-2 mb-3'>Log Out</Button>
                                         </>
                                         :
                                         <>
-                                            <Link to="/login" className="text-decoration-none">Login</Link>
-                                            <Link to="/signup" className="text-decoration-none ms-2">Sign Up</Link>
+                                            <Link to="/login" className="text-decoration-none ms-2"><Button>Login</Button></Link>
+                                            <Link to="/signup" className="text-decoration-none ms-2"><Button>Sign Up</Button></Link>
                                         </>
                                 }
-                            </Nav.Link>
+                            </Nav>
                             <Nav.Link eventKey={2} href="">
                                 {user?.photoURL ?
                                     <Image style={{ height: '30px' }} roundedCircle

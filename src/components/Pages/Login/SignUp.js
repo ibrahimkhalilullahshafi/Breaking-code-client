@@ -49,36 +49,39 @@ const SignUp = () => {
     }
 
     return (
-        <Form onSubmit={submitHandler}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Full Name</Form.Label>
-                <Form.Control type="text" name="name" placeholder="Enter Full Name" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Your Photo</Form.Label>
-                <Form.Control type="text" name="photoURL" placeholder="Enter PhotoURL" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" name="email" placeholder="Enter Email" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" name="password" placeholder="Enter Password" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox"
-                    onClick={acceptHandler}
-                    label={<>Accept <Link to="/terms">Terms and Conditions</Link></>} >
-                </Form.Check>
-            </Form.Group>
-            <Button variant="primary" type="submit" disabled={!accept}>
-                Sign Up
-            </Button>
-            <Form.Group><Form.Text className="text-danger">
-                {error}
-            </Form.Text></Form.Group>
-        </Form>
+        <div>
+            <Form onSubmit={submitHandler}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control type="text" name="name" placeholder="Enter Full Name" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Your Photo</Form.Label>
+                    <Form.Control type="text" name="photoURL" placeholder="Enter PhotoURL" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" name="email" placeholder="Enter Email" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" name="password" placeholder="Enter Password" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox"
+                        onClick={acceptHandler}
+                        label={<>Accept <Link to="/terms">Terms and Conditions</Link></>} >
+                    </Form.Check>
+                </Form.Group>
+                <Button variant="primary" type="submit" disabled={!accept}>
+                    Sign Up
+                </Button>
+                <Form.Group><Form.Text className="text-danger">
+                    {error}
+                </Form.Text></Form.Group>
+                <>Already have an account? <Link to="/login">Login</Link></>
+            </Form>
+        </div>
     );
 };
 

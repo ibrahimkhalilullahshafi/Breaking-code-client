@@ -43,7 +43,7 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar className='mb-3' collapseOnSelect expand="lg" bg="" variant="light">
+            <Navbar className='mb-3' collapseOnSelect expand="lg" bg="dark" variant="light">
                 <Container>
 
                     <Navbar.Brand><Link to={'/'} className="text-decoration-none fs-2 fw-bold"><img
@@ -57,12 +57,13 @@ const Header = () => {
 
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav><Link to='/blog' className="text-decoration-none fw-semibold fs-4 text-black">BLOG</Link></Nav>
+                            <Nav><Link to='/blog' className="text-decoration-none fw-semibold fs-4 text-white">BLOG</Link></Nav>
+                            <Nav className='ms-2'><Link to='/faq' className="text-decoration-none fw-semibold fs-4 text-white">FAQ</Link></Nav>
 
                         </Nav>
                         <Nav>
                             <Nav>
-                                <Form className='mt-2'><Form.Check
+                                <Form className='mt-2 text-white'><Form.Check
                                     type="switch"
                                     id="custom-switch"
                                     label="Dark"

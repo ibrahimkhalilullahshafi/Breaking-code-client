@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import FreqQues from "../components/Fixed-Components/FreqQues/FreqQues";
 import Home from "../components/Home/Home";
 import Blog from "../components/Pages/Blog/Blog";
 import Checkout from "../components/Pages/Checkout/Checkout";
@@ -41,6 +42,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/terms",
                 element: <Terms></Terms>,
+            },
+            {
+                path: "/faq",
+                element: <FreqQues></FreqQues>,
             },
             {
                 path: "/blog",

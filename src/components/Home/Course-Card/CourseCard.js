@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const CourseCard = ({ course }) => {
 
     return (
-        <Card className='col-md-6 col-lg-4 mb-3 bg-transparent'>
+        <Card className='col-md-6 col-lg-4 mb-3 gx-4 bg-transparent'>
             <Card.Img variant="top" src={course.image} />
             <Card.Body>
                 <Card.Title className='text-center'>{course.title}</Card.Title>
